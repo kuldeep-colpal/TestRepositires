@@ -4,3 +4,10 @@ if (int(day) <32 and int(month)<13):
     print("Entered date:- "+day+"-"+ month+"-"+year)
 else:
     print("invalid Date!")  
+
+idate = input("Enter the date in format 'dd/mm/yy' : ")
+day,month,year = idate.split('/')
+if (int(day) <32 and int(month)<13):
+    print("Entered date:- "+day+"-"+ month+"-"+year)
+else:
+    print("invalid Date!")  
