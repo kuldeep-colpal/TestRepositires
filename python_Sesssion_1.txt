@@ -1,0 +1,82 @@
+i=[1,2,3,4,5,6]
+j=0
+for letter in i:
+    j= j+letter
+    print(j)
+
+
+i=[1,2,3,4,5,6]
+j=0
+for letter in i:
+    j= j+letter
+    print(j)    
+else:
+    print ('No Item left')
+
+i = int(input('enter n'))
+j = 0
+k = j + 1
+while j < i :
+    j= j+1
+    j +=j
+    print(j)
+
+
+i = int(input('enter n'))
+print(list(range(2,i,2)))
+i=[1,2,3,4,5,6]
+j=0
+for letter in i:
+    j= j+letter
+    print(j)
+
+-- Palindrome Long
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+-- Palindrome Short
+n=int(input("Enter number:"))
+txt = str(n) [::-1]
+i = int(txt)
+if(n==i):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+-- Sum of digits
+number = int(input("Enter number:"))
+print (sum(int(digit) for digit in str(number)))
+    
+-- Sum of Digit Short
+number = int(input("Enter number:"))
+print (sum(map(int, str(number))))
+
+-- Divisible by 7 but not multiple of 5
+li = []
+for number in range(2000, 3200, 1):
+    mod = number%7
+    mod1 = number%5
+    if(mod==0 and mod1 !=0):
+        li.append(number)
+print(li)
+
+-- Revers the name
+i = str(input('enter name'))
+n = i.split(" ")
+print (n[1]+ " " + (n[0]))
+
+
+
+--
+p = list(range(2000,3200))
+li = [str(num) for num in p if num%7 == 0 and num%5 != 0]
+print(li)
