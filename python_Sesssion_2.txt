@@ -171,3 +171,22 @@ def hello_world(n):
         return n
 
 print(hello_world(33))
+
+--Map and Lambda Function
+def fahrenheit(T):
+    return((float(9)/5)*T + 32)
+temp=[2,4,6,7,8]
+F_temps = list(map(fahrenheit,temp))
+#Show
+print(F_temps)
+print(list(map(lambda x:(float(9)/5)*(x+32),temp)))
+list(map(lambda x:(5.0/9)*( x-  32),f_temps))
+
+--Addition of 3 lists items
+a= [1,2,3,4]
+b= [5,6,7,8]
+c=[9,10,11,12]
+list(map(lambda x,y:x+y,a,b))
+list(map(lambda x,y,z:x+y+z,a,b,c))
+print(temp)
+
