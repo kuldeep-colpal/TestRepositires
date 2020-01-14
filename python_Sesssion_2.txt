@@ -4,10 +4,170 @@ if (int(day) <32 and int(month)<13):
     print("Entered date:- "+day+"-"+ month+"-"+year)
 else:
     print("invalid Date!")  
-
+#Check Date
 idate = input("Enter the date in format 'dd/mm/yy' : ")
 day,month,year = idate.split('/')
-if (int(day) <32 and int(month)<13):
-    print("Entered date:- "+day+"-"+ month+"-"+year)
+yrlen=len(year)
+if (int(day)<31 and int(month)<13 and yrlen <= 4 ):
+    print("Correct Entered date !!:- "+day+"-"+ month +"-"+year)
 else:
-    print("invalid Date!")  
+    print("invalid Date!")
+
+#Print *
+mylist=[1,2,3,4,5,4,3,2,1]
+for i in mylist:
+    print('*' * i)
+
+#Dictionary
+dict={'data':'123','science':'234','AI':'235'}
+print(dict)
+for key in sorted(dict):
+    print(key)
+#
+dict={'data':'123','science':'234','AI':'235','Robo':[2, 4, 3]}
+print(dict)
+for key in sorted(dict):
+    if(key == 'Robo'):
+        li = dict[key]
+        print(li)
+        for ele in li:
+            print(dict[key][ele])
+
+#- Duplicate in Dictionary
+
+student_data = {'id1':
+                {'name': ['Sara'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id2':
+                {'name': ['David'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id3':
+                {'name': ['Sara'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id4':
+                {'name': ['Surya'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                }
+outdict ={}
+
+for key,value in student_data.items() :
+    if (value not in outdict.values()):
+        outdict[key]=value
+print(outdict)
+
+name=[]
+clss=[]
+subj=[]
+for key in sorted(student_data):
+    if(student_data[key]['name'] not in name):
+        name.append(student_data[key]['name'])
+        clss.append(student_data[key]['class'])
+        subj.append(student_data[key]['subject_integration'])
+print (name + clss + subj)
+
+outdict ={'id1':{'name': ['Sara'],'class': ['V'],'subject_integration': ['english, math, science']}
+         }
+print(outDict)
+
+#Merg 2 dictionaries
+
+student_data = {'id1':
+                {'name': ['Sara'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id2':
+                {'name': ['David'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id3':
+                {'name': ['Sara'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id4':
+                {'name': ['Surya'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                }
+student_data1 = {'id1':
+                {'name': ['Sara'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                'id5':
+                {'name': ['Sundeep'],
+                'class': ['V'],
+                'subject_integration': ['english, math, science']
+                },
+                }
+outdict={}
+outdict = student_data.update(student_data1)
+print(student_data)
+
+#Dictionary in one line
+{x:x**2 for x in range(10)}
+# Prime no
+def prim(num):
+    if num > 1:
+      for i in range(2,num//2):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+       else:
+            print(i,"is a prime number")
+    else:
+       print(num,"is not a prime number")
+
+prim(23)
+
+# Fibonacci 
+def genFib(n):
+    a=1
+    b=1
+    for i in range(n):
+        a,b=b,a+b
+        yield a
+
+for num in genFib(10):
+    print(num)
+
+#Iteration of hello
+def iter(s):
+    s='hello'
+    #Iterator over string
+    for let in s:
+        print(let)
+        yield(let)
+s_iter = iter(s)
+next(s_iter)
+
+# write a program to print all unique values from a dictionary in a list
+student_data = {'id1':'Value1','id2':'Value2','id3':'Value2','id4':'Value1'}
+keys = student_data.values()
+uniq = list(set(keys))
+print(uniq)
+
+#Divisible by 3 & 5
+def hello_world(n):
+    if(n%5 == 0 and n%3 == 0):
+        return "Hello World"
+    elif(n%5 == 0):
+        return "World"
+    elif(n%3 == 0):
+        return "Hello"
+    else:
+        return n
+
+print(hello_world(33))
